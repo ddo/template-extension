@@ -1,0 +1,15 @@
+{
+    "name": "template-extension",
+    "version": "0.0.1",
+    "scripts": {
+        "watch": "parcel watch --no-hmr --no-source-maps src/manifest.json",
+        "build": "parcel build --no-source-maps src/manifest.json"
+    },
+    "repository": "git@github.com:ddo/template-extension.git",
+    "author": "ddo <joeddo89@gmail.com>",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-web-extension": "^1.6.1"
+    }
+}

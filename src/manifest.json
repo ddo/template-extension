@@ -1,0 +1,31 @@
+{
+    "name": "sample extension",
+    "description": "update me",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "background": {
+        "persistent": true
+    },
+    "icons": {
+        "16": "/logo/logo.png",
+        "48": "/logo/logo.png",
+        "128": "/logo/logo.png"
+    },
+    "browser_action": {
+        "default_icon": "/logo/logo.png",
+        "default_title": "sample extension"
+    },
+    "permissions": ["tabs", "notifications"],
+    "background": {
+        "scripts": ["/background/index.js"]
+    },
+    "options_page": "/option/index.html",
+    "content_scripts": [
+        {
+            "matches": ["*://*/*", "file:///*/*"],
+            "js": ["/content/index.js"]
+        }
+    ],
+    "web_accessible_resources": ["/inject/index.js"],
+    "content_security_policy": "script-src 'self' https://*.example.com; object-src 'self'"
+}
